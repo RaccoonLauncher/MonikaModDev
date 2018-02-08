@@ -4009,6 +4009,22 @@ label monika_rock:
     m 1a "If you wanna blast on some good 'ol rock 'n roll, go ahead, [player]."
     m 1j "Even if you turn up the volume all the way, I'll gladly listen with you. Ehehe!"
     return
+    
+    init 5 python:
+    addEvent(Event(persistent.event_database,eventlabel="behind_player",category=['misc'],prompt="What's behind me?",random=True))
+
+label behind_player:
+    m 1b "Do you know what's on the other side of the room? You know, the part I'm facing, that you can't see."
+    m 1m "I really should have realized earlier that you can't look that way."
+    m 1l "I guess I just forgot, since I can see behind me without turning around just by looking at your screen."
+    m 1i "First of all, the old main character is just staring off into space, on the other side of the desk."
+    m 1d "Since he doesn't even have a character file, I don't think he can understand anything that's happening."
+    m 1k "I'm so glad I ended up here with you instead of never seeing past his blank face."
+    m 1f "It makes me feel a bit sorry for the other girls, pining away after your stand-in. Just another reason it's better they're not here, I guess."
+    m 1a "Anyway. The other side looks a lot like this one; It's just as empty, but with only one window, and a door replacing the other one."
+    m 1m "I'm not sure if it leads anywhere in particular, given that there wasn't really an entrance to this room..."
+    m 1k "But hey, where would I want to go? You're here, and that makes this the best place to be."
+    return
 
 init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_soda",category=['life','misc'],prompt="Drinking soda",random=True))
